@@ -1,0 +1,36 @@
+import type { FastifyInstance } from 'fastify';
+import healthRoutes from '@/routes/health';
+import authRoutes from '@/auth/routes';
+import usersRoutes from '@/users/routes';
+import productsRoutes from '@/products/routes';
+import marketplaceRoutes from '@/marketplace/routes';
+import inventoryRoutes from '@/inventory/routes';
+import ordersRoutes from '@/orders/routes';
+import deliveryRoutes from '@/delivery/routes';
+import paymentsRoutes from '@/payments/routes';
+import notificationsRoutes from '@/notifications/routes';
+import chatRoutes from '@/chat/routes';
+import friendsRoutes from '@/friends/routes';
+import worldRoutes from '@/world/routes';
+import npcRoutes from '@/npc/routes';
+import analyticsRoutes from '@/analytics/routes';
+import assetsRoutes from '@/assets/routes';
+
+export default async function registerRoutes(app: FastifyInstance): Promise<void> {
+  await app.register(healthRoutes);
+  await app.register(authRoutes);
+  await app.register(usersRoutes);
+  await app.register(productsRoutes);
+  await app.register(marketplaceRoutes);
+  await app.register(inventoryRoutes);
+  await app.register(ordersRoutes);
+  await app.register(deliveryRoutes);
+  await app.register(paymentsRoutes);
+  await app.register(notificationsRoutes);
+  await app.register(chatRoutes);
+  await app.register(friendsRoutes);
+  await app.register(worldRoutes);
+  await app.register(npcRoutes);
+  await app.register(analyticsRoutes);
+  await app.register(assetsRoutes);
+}
