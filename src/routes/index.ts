@@ -15,6 +15,10 @@ import worldRoutes from '@/world/routes';
 import npcRoutes from '@/npc/routes';
 import analyticsRoutes from '@/analytics/routes';
 import assetsRoutes from '@/assets/routes';
+import shopsRoutes from '@/shops/routes';
+import shopkeepersRoutes from '@/shopkeepers/routes';
+import rentalsRoutes from '@/rentals/routes';
+import cartRoutes from '@/cart/routes';
 
 export default async function registerRoutes(app: FastifyInstance): Promise<void> {
   await app.register(healthRoutes);
@@ -33,4 +37,8 @@ export default async function registerRoutes(app: FastifyInstance): Promise<void
   await app.register(npcRoutes);
   await app.register(analyticsRoutes);
   await app.register(assetsRoutes);
+  await app.register(shopsRoutes);
+  await app.register(shopkeepersRoutes);
+  await app.register(rentalsRoutes);
+  await app.register(cartRoutes);
 }
